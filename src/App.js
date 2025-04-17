@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+// import {Books} from "./utils/mockData"
+// import BookList from './Components/BookList';
+import { Provider } from "react-redux";
+import appStore from './utils/appStore';
+import { Outlet } from 'react-router-dom';
+import Header from './Components/Header';
+import { Link } from 'react-router-dom';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={appStore} >
+
+
+      <h1 className='hdr'>
+        <span className='hdrs'>Welcome To Booknest</span>
+        </h1>
+
+      <Header /><br />
+
+      {/* <BookList booksData={Books}/> */}
+
+     <Outlet />
+
+
+    </Provider>
   );
 }
 
