@@ -1,0 +1,18 @@
+
+install dependencies/plugins run command => npm install 
+
+to start the project on server run command => npm start 
+it will redirect you to homapage
+
+You can search for the book
+
+You can Add a new book
+
+you can add your favourite books in cart
+
+
+
+
+
+
+
