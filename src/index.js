@@ -9,11 +9,16 @@ import Error from './Components/Error';
 import Searchbook from './Components/Searchbook';
 import Cart from "./Components/Cart"
 import BookDetails from './Components/BookDetails';
+import BrowseBooks from './Components/BrowseBooks';
 
 const appRouter = createBrowserRouter([
   {
     path:"/",
     element:<App/>,
+    // {
+    //   path: "/",
+    //   element:<BrowseBooks/>
+    // },
     children :[
       {
           path:"/",
@@ -23,14 +28,7 @@ const appRouter = createBrowserRouter([
         path:"/AddBook",
         element:<AddBooks/>
       },
-      // {
-      //   path:"/About",
-      //   element:<About/>
-      // },
-      // {
-      //   path:"/Book",
-      //   element:<Book/>
-      // },
+      
       {
         path:"/bookdetails/:id",
         element:<BookDetails/>
